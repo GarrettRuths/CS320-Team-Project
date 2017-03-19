@@ -1,25 +1,27 @@
 package junit_model;
 
 import static org.junit.Assert.*;
-import object.post_object;
-import object.user_object;
+
+import model.Account;
 import org.junit.Test;
 
-public class post_objectTest {
+import model.Post;
+
+public class PostTest {
 
 	@Test
 	public void test() {
 		//testing variables
 		String text = "this is a post";
-		user_object testuser = new user_object();
-		user_object newuser = new user_object();
-		post_object post = new post_object(text, testuser);
+		Account testaccount = new Account(null, null, 0, null, null, null, false);
+		Account newaccount = new Account(null, null, 0, null, null, null, false);
+		Post post = new Post(text, testaccount);
 		org.junit.Assert.assertEquals(post.getText(), "this is a post");
-		org.junit.Assert.assertEquals(post.getUser(), testuser);
+		org.junit.Assert.assertEquals(post.getAccount(), testaccount);
 		post.setText("new post");
-		post.setUser(newuser);
+		post.setAccount(newaccount);
 		org.junit.Assert.assertEquals(post.getText(), "new post");
-		org.junit.Assert.assertEquals(post.getUser(), newuser);
+		org.junit.Assert.assertEquals(post.getAccount(), newaccount);
 		
 	}
 

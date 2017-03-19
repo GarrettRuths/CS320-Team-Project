@@ -1,26 +1,28 @@
 package junit_model;
 
 import static org.junit.Assert.*;
-import object.group_object;
-import object.post_object;
-import object.user_object;
+
+import model.Account;
 import java.util.ArrayList;
 
 import org.junit.Test;
 
-public class group_objectTest {
+import model.Group;
+import model.Post;
+
+public class GroupTest {
 	
 	@Test
 	public void test() {
 		//does NOT test for requests, requests not complete yet.
 		
 		//testing variables
-		group_object group = new group_object("a group", "0", "the group name");
-		user_object testuser = new user_object();
-		ArrayList<user_object> userlist = new ArrayList<user_object>(); 
-		userlist.add(testuser);
-		post_object testpost = new post_object("a post", testuser);
-		ArrayList<post_object> testposts = new ArrayList<post_object>();
+		Group group = new Group("a group", "0", "the group name");
+		Account testAccount = new Account(null, null, 0, null, null, null, false);
+		ArrayList<Account> userlist = new ArrayList<Account>(); 
+		userlist.add(testAccount);
+		Post testpost = new Post("a post", testAccount);
+		ArrayList<Post> testposts = new ArrayList<Post>();
 		testposts.add(testpost);
 		
 		//actual tests
@@ -32,13 +34,13 @@ public class group_objectTest {
 		org.junit.Assert.assertEquals(group.getRaiting(), 11);
 		group.setID("asd16");
 		org.junit.Assert.assertEquals(group.getID(), "asd16");
-		group.addUser(testuser);
+		group.addAccount(testAccount);
 		org.junit.Assert.assertEquals(group.getMembers(), userlist);
-		org.junit.Assert.assertFalse(group.userisMod(testuser));
-		group.addMod(testuser);
-		org.junit.Assert.assertTrue(group.userisMod(testuser));
+		org.junit.Assert.assertFalse(group.userisMod(testAccount));
+		group.addMod(testAccount);
+		org.junit.Assert.assertTrue(group.userisMod(testAccount));
 		org.junit.Assert.assertEquals(group.getModerators(), userlist);
-		group.createPost("a post", testuser);
+		group.createPost("a post", testAccount);
 		org.junit.Assert.assertFalse(group.getPosts().isEmpty());
 		
 	}

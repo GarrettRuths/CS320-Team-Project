@@ -1,17 +1,17 @@
-package object;
+package model;
 
+import model.Account;
 
-
-public class post_object {
+public class Post {
 
 	private String text;
-	private user_object user;
+	private Account account;
 	// date time at later date
 	// image or picture
 	
-	public post_object(String text, user_object user /*Date date*/){
+	public Post(String text, Account account /*Date date*/){
 		this.text = text;
-		this.user = user;
+		this.account = account;
 		//this.datetime = date;
 	}
 	
@@ -21,8 +21,8 @@ public class post_object {
 		this.text = text;
 	}
 	
-	public void setUser(user_object user){
-		this.user = user;
+	public void setAccount(Account account){
+		this.account = account;
 	}
 	
 	//getters
@@ -30,7 +30,7 @@ public class post_object {
 		return this.text;
 	}
 	
-	public user_object getUser(){
-		return this.user;
+	public Account getAccount(){
+		return this.account;
 	}
 }
