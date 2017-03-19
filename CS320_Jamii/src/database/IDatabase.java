@@ -443,7 +443,7 @@ public class IDatabase {
 
 	public static void main(String[] args) {
 		System.out.println("----Loading Database Driver---- ");
-		IDatabase db = DatabaseProvider.getInstance();
+		IDatabase db = DatabaseProvider.getDatabase();
 
 		System.out.println("----Connecting to Database---- ");
 		Connection conn = db.connect();
