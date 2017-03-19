@@ -1,5 +1,4 @@
-/controller/
-/database/
-/model/
-/object/
 /servlet/
+/object/
+/controller/
+/model/

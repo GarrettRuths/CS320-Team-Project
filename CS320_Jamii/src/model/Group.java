@@ -1,25 +1,27 @@
-package object;
+package model;
 
 
 import java.util.ArrayList;
 
-public class group_object {
+import model.Account;
+
+public class Group {
 	
 	private String description, id, name;
 	private int rating;
-	private ArrayList<user_object> members;
-	private ArrayList<user_object> moderators;
-	private ArrayList<user_object> requests;
-	private ArrayList<post_object> posts;
+	private ArrayList<Account> members;
+	private ArrayList<Account> moderators;
+	private ArrayList<Account> requests;
+	private ArrayList<Post> posts;
 	
-	public group_object(String description, String id, String name){
+	public Group(String description, String id, String name){
 		this.description = description;
 		this.id = id;
 		this.rating = 0;
-		this.members = new ArrayList<user_object>();
-		this.moderators = new ArrayList<user_object>();
-		this.requests = new ArrayList<user_object>();
-		this.posts = new ArrayList<post_object>();
+		this.members = new ArrayList<Account>();
+		this.moderators = new ArrayList<Account>();
+		this.requests = new ArrayList<Account>();
+		this.posts = new ArrayList<Post>();
 	}
 	
 	// setters
@@ -50,43 +52,44 @@ public class group_object {
 		return this.rating;
 	}
 	
-	public ArrayList<user_object> getMembers(){
+	public ArrayList<Account> getMembers(){
 		return this.members;
 	}
 	
-	public ArrayList<user_object> getModerators(){
+	public ArrayList<Account> getModerators(){
 		return this.moderators;
 	}
 	
-	public ArrayList<user_object> getRequests(){
+	public ArrayList<Account> getRequests(){
 		return this.requests;
 	}
 	
-	public ArrayList<post_object> getPosts(){
+	public ArrayList<Post> getPosts(){
 		return this.posts;
 	}
 	
 	//other methods
 	
-	public void createPost(String text, user_object user){
-		this.posts.add(new post_object(text, user));
+	public void createPost(String text, Account account){
+		this.posts.add(new Post(text, account));
 	}
 	
-	public void addUser(user_object user){
-		this.members.add(user);
+	public void addAccount(Account account){
+		this.members.add(account);
 	}
 	
-	public void addMod(user_object user){
-		this.moderators.add(user);
+	public void addMod(Account account){
+		this.moderators.add(account);
 	}
 	
-	public Boolean userisMod(user_object user){
-		if(this.moderators.contains(user)){
+	public Boolean userisMod(Account account){
+		if(this.moderators.contains(account)){
 			return true;
 		}
 		else
 			return false;
 	}
+
 	
 	// need discussion on how to remove posts, edit posts, remove user, accept user
 	
