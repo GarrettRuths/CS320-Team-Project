@@ -17,6 +17,7 @@ public class Group {
 	public Group(String description, String id, String name){
 		this.description = description;
 		this.id = id;
+		this.name = name;
 		this.rating = 0;
 		this.members = new ArrayList<Account>();
 		this.moderators = new ArrayList<Account>();
@@ -34,6 +35,10 @@ public class Group {
 		this.id = id;
 	}
 	
+	public void setName(String name){
+		this.name = name;
+	}
+	
 	public void setRaiting(int raiting){
 		this.rating = raiting;
 	}
@@ -48,6 +53,10 @@ public class Group {
 		return this.id;
 	}
 
+	public String getName(){
+		return this.name;
+	}
+	
 	public int getRaiting(){
 		return this.rating;
 	}
