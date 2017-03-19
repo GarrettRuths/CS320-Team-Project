@@ -48,10 +48,10 @@
     				</div><!-- /.container -->
     			</nav>
     	
-    		<form class="login" action="${pageContext.servletContext.contextPath}/loginEntered" method="post">
-            	<input type="text" id="username"placeholder="Username" value="${username}" required>
-                <input type="password" id="password"placeholder="Password" value="${password}" required>
-                <input type="button" value="Login" id="loginSubmit">
+    		<form class="login" action="${pageContext.servletContext.contextPath}/login" method="post">
+            	<input type="text" name="username"placeholder="Username" value="${username}" required>
+                <input type="password" name="password"placeholder="Password" value="${password}" required>
+                <input type="Submit" value="Login" name="submit">
                 
 			</form><!-- /.login -->	
 			
