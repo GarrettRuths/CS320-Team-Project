@@ -17,7 +17,7 @@ public class object_controller {
 	public object_controller(){
 		this.users = new ArrayList<Account>();
 		this.groups = new ArrayList<Group>();
-		this.users.add(new Account("admin", "admiralalonzoghostpenis420YOLO", 1234, "Admin McAdmin", "admin@admin.admin", "555-555-5555", false ));
+		this.users.add(new Account("admin", "password", 1234, "Admin McAdmin", "admin@admin.admin", "555-555-5555", false ));
 		this.groups.add(new Group("Admin Test Group", "Admin", "Admin"));
 		this.groups.get(0).addAccount(this.users.get(0));
 	}

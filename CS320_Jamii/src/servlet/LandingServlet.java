@@ -14,7 +14,8 @@ public class LandingServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-			req.getRequestDispatcher("/_view/landing.jsp").forward(req, resp);
+		
+			req.getRequestDispatcher("/_view/landing.jsp").forward(req, resp);	
 		}
 
 
@@ -23,6 +24,5 @@ public class LandingServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 			req.getRequestDispatcher("/_view/landing.jsp").forward(req, resp);
-			
 	}
 }
