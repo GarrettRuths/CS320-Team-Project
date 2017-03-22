@@ -856,6 +856,7 @@ fieldset[disabled] .navbar-inverse .navbar-btn.active {
   padding-top: 26px;
   padding-bottom: 26px;
   line-height: 1;
+  margin-right:120px;
   }
 .navbar-lg .navbar-brand > [class*="fui-"] {
   font-size: 24px;
@@ -929,7 +930,7 @@ width:29px;
 height:29px;
 }
 
-.login{
+#login{
 display: block;
 position:relative;
 top:200px;
@@ -1008,6 +1009,25 @@ font-size: 30px;
 #pageLinks{
 margin-top:17px;
 }
+
+#logo{
+float:left;
+display:block;
+position:absolute;
+top:5px;
+height:60px;
+width:auto;}
+
+#intro{
+height:50px;}
+
+
+
+
+
+
+
+
 
 
 
