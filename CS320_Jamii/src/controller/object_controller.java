@@ -26,20 +26,9 @@ public class object_controller {
 	public boolean credentials(String username, String password){
 		for(int x = 0; x < users.size(); x++){
 			if(users.get(x).getUsername().equals(username) && users.get(x).getPassword().equals(password)){
-				System.out.println("Found match");
 				return true;
 			}
 		}
 		return false;
-	}
-	
-	
-	//comment
-	
-	
-	
-	
-	
-	
-
+	}	
 }

@@ -49,7 +49,6 @@ public class LoginServlet extends HttpServlet
 			if(loggedin == true)
 			{
 				resp.sendRedirect(req.getContextPath() + "/home");
-				return;
 			}
 			else
 			{	
