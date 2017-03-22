@@ -16,7 +16,13 @@
     
     <link href="css/style.css" rel="stylesheet">
 
-    
+     <style type="text/css">
+                #errorMessage {
+                        padding-top: 10px;
+                        color: red;
+                        font-size: 110%;
+                }
+     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -53,6 +59,12 @@
                 <input type="password" name="password"placeholder="Password" value="${password}" required>
                 <input type="Submit" value="Login" name="submit">
                 
+                <div id="errorMessage">
+                	<c:if test="${! empty errorMessage}">
+						<tr>${errorMessage}</tr>
+					</c:if>
+				</div>
+				
 			</form><!-- /.login -->	
 			
     		</div><!-- /.wrapper -->

@@ -27,11 +27,11 @@ public class GroupTest {
 		
 		//actual tests
 		org.junit.Assert.assertEquals(group.getDescription(), "a group");
-		org.junit.Assert.assertEquals(group.getRaiting(), 0);
+		org.junit.Assert.assertEquals(group.getRating(), 0);
 		group.setDescription("a new group");
 		org.junit.Assert.assertEquals(group.getDescription(), "a new group");
-		group.setRaiting(11);
-		org.junit.Assert.assertEquals(group.getRaiting(), 11);
+		group.setRating(11);
+		org.junit.Assert.assertEquals(group.getRating(), 11);
 		group.setID("asd16");
 		org.junit.Assert.assertEquals(group.getID(), "asd16");
 		group.addAccount(testAccount);

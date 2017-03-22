@@ -191,59 +191,17 @@ public class IDatabase {
 			stmt.setString(1, username);
 			
 			set = stmt.executeQuery();
-			
-			if(set.next()){
-				int userId = set.getInt(1);
+		
 				account = inflateAccount(set,2);
 				
-				stmt2 = conn.prepareStatement(
-						" SELECT book_id, book_price, user_id FROM books_for_sale_by_user "
-						+ " WHERE user_id = ?");
-				stmt2.setInt(1, userId);
 			
-				set2 = stmt2.executeQuery();
-			}
 		}finally{
 			DBUtil.closeQuietly(stmt);
-			DBUtil.closeQuietly(stmt2);
 			DBUtil.closeQuietly(set);
-			DBUtil.closeQuietly(set2);
 		}
 		return account;
 	}
-	
-	private Account getAccountFromUserId(Connection conn, int userId) throws SQLException{
-		Account account = null;
-		PreparedStatement stmt = null;
-		PreparedStatement stmt2 = null;
-		ResultSet set = null;
-		ResultSet set2 = null;
-		try{
-			stmt = conn.prepareStatement(
-					" SELECT * FROM accounts "
-					+" WHERE user_id=?");
-			stmt.setInt(1, userId);
-			
-			set = stmt.executeQuery();
-			
-			if(set.next()){
-				account = inflateAccount(set,2);
-				
-				stmt2 = conn.prepareStatement(
-						" SELECT book_id, book_price, user_id FROM books_for_sale_by_user "
-						+ " WHERE user_id = ?");
-				stmt2.setInt(1, userId);
-			
-				set2 = stmt2.executeQuery();
-			}
-		}finally{
-			DBUtil.closeQuietly(stmt);
-			DBUtil.closeQuietly(stmt2);
-			DBUtil.closeQuietly(set);
-			DBUtil.closeQuietly(set2);
-		}
-		return account;
-	}
+
 	
 	private String getPasswordByUsername(Connection conn,String username) throws SQLException{
 		String password = null;
@@ -349,7 +307,7 @@ public class IDatabase {
 	private Connection connect() {
 		Connection conn = null;
 		try{
-			conn =  DriverManager.getConnection("jdbc:derby:../database/bookstore.db;create=true");	
+			conn =  DriverManager.getConnection("jdbc:derby:../database/Jamii.db;create=true");	
 			conn.setAutoCommit(false);
 		} catch(SQLException e){
 			System.out.println(e.getSQLState());
@@ -391,7 +349,7 @@ public class IDatabase {
 	 * --------------------------STATIC METHODS FOR MODIFING THE DATABASE OUTSIDE OF THE WEB APP------------------------------------
 	 */
 	private boolean createTables(Connection conn){
-		//Table Names: authors, books, authored, books_for_sale_by_user, accounts
+		//Table Names: accounts
 		PreparedStatement stmt1 = null;
 		
 		try {
@@ -443,7 +401,7 @@ public class IDatabase {
 
 	public static void main(String[] args) {
 		System.out.println("----Loading Database Driver---- ");
-		IDatabase db = DatabaseProvider.getInstance();
+		IDatabase db = DatabaseProvider.getDatabase();
 
 		System.out.println("----Connecting to Database---- ");
 		Connection conn = db.connect();

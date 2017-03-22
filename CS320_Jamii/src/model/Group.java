@@ -39,8 +39,8 @@ public class Group {
 		this.name = name;
 	}
 	
-	public void setRaiting(int raiting){
-		this.rating = raiting;
+	public void setRating(int rating){
+		this.rating = rating;
 	}
 	
 	//getters
@@ -57,7 +57,7 @@ public class Group {
 		return this.name;
 	}
 	
-	public int getRaiting(){
+	public int getRating(){
 		return this.rating;
 	}
 	
