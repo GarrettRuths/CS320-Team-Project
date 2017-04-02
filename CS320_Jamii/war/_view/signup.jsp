@@ -40,22 +40,24 @@
     				<div class="container">
     				
     					<div class="navbar-header">
-    						<a href="index.html" class="navbar-brand brand"><img src="images/TransparentWhite.png" id="logo"></a>
+
+    						<a href="home" class="navbar-brand brand"><img src="images/TransparentWhite.png" id="logo"></a>
+
    						</div>
     					
     					
     				</div><!-- /.container -->
     			</nav>
-    		
-    		<!-- -->
-    		<form class="login" action="${pageContext.servletContext.contextPath}/loginEntered" method="post">
-            	<input type="text" id="username" name="username" placeholder="User name" required>
-            	<input type="text" id="username" name="firstname" placeholder="First name" required>
-            	<input type="text" id="username" name="email" placeholder="Email" required>
-                <input type="password" id="password" name="password" placeholder="Password"  required>
-                <input type="password" id="password" name="password2" placeholder="Re-Type Password"  required>
-                <input type="file" name="pic" accept="image/*">
-                <input type="button" value="Sign Up!" id="loginSubmit">
+
+    	
+    		<form id="login" class="login" action="${pageContext.servletContext.contextPath}/login" method="post">
+                <input type="text" id="username" name="username" placeholder="Username" value="${username}" required>
+                <input type="password" id="password" name="password" placeholder="Password" value="${password}" required>
+                <input type="text" id="name" name="name" placeholder="Name" value="${name}" required>
+                <input type="text" id="email" name="email" placeholder="Email" value="${email}" required>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number" value="${email}" required>
+                <input type="Submit" value="Sign Up" id="signupSubmit" name="signupSubmit">
+
                 
 			</form><!-- /.login -->	
 			

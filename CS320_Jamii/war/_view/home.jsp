@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html><head>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<html>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Script Eden ( http://scripteden.net/ ) Template Builder v2.0.0">  
     <!--pageMeta-->
-
+    
+    <title>Jamii - a community for communities</title>
+    
     <!-- Loading Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -29,7 +35,7 @@
     
     <div id="page" class="page">
         
-    <header class="item header margin-top-0 header10" id="header10">
+    	<header class="item header margin-top-0 header10" id="header10">
     
     		<div class="wrapper">
     	
@@ -38,51 +44,49 @@
     				<div class="container">
     				
     					<div class="navbar-header">
-    						<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
-    							<span class="sr-only">Toggle navigation</span>
-    						</button>
-    						<a href="#" class="navbar-brand brand"> Jamii Logo</a>
+    						<a href="home" class="navbar-brand brand"><img src="images/TransparentWhite.png" id="logo"></a>
    						</div>
-    					<!--/.navbar-header -->
-    					<!-- HERE IS YOUR SEARCH JSP THING -->
-    					<form class="search-collapse" action="${pageContext.servletContext.contextPath}/searchSite" method="post" >
-                            <input type="text" id="searchText"placeholder="Search..." required>
-                            <input type="image" src="images/search.png" value="Search" id="searchButton">
-						</form>
-						
-    					<div id="navbar-collapse-02" class="collapse navbar-collapse">
-    						<ul class="nav navbar-nav navbar-right">
-    							<li class="propClone"><a href="#"><img src="images/gear.png" class="tabIcon"></a></li>
-    							<li class="propClone"><a href="#"><img src="images/logout.png" class="tabIcon"></a></li>
-    						</ul>
-    					</div> 
-    					<!--/.navbar-collapse -->
+   						<ul class="nav navbar-nav navbar-right">
+    						<li class="propClone"><a href="login">Login</a></li>
+    						<li class="propClone"><a href="signup">Sign Up</a></li>
+    					</ul>
+    					
+    					
     				</div><!-- /.container -->
     			</nav>
-    			
-    		<!--pageContent-->
-    			<div class="pageContent">
-    				<div id="coverPhotoContainer">
-    				<!-- HERE IS WHERE THE COVER PHOTO JSP THING IS : "${group.img}"-->
-    					<img src="images/coverTest.jpg" id="coverPhoto">
-    				</div>
-    				<div class="pageInfo">
-    					<div id="rating"> ðŸ˜‡ </div>
-    					<p id="pageName"> ${group.name} </p>
-    					<div id="pageLinks"> 
-    						<a href="#">${group.memberCount} Members</a> |
-    						<a href="#">Photos</a> |
-    						<a href="#">Rules</a> |
-    						<a href="#">Leave </a>
-    					</div>
-    				</div>
-    				<div id="sidebar"></div>
-    			</div>
-    		<!--/pageContent-->
-    		
+			
     		</div><!-- /.wrapper -->
     	
-    	</header><!-- /.item --></div><!-- /#page -->
+    	</header><!-- /.item -->
+    	<!-- // End Nav Bar --><!-- Start Content Block -->
+		<div id="intro"></div>
+		<div id="container" class="container">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div id="editContent" class="editContent">
+					<h1>Organize all your social groups</h1>
+				</div>
+				<div id="editContent" class="editContent">
+					<p class="lead">Pommy ipsum complete mare bread and butter pudding collywobbles grub's up I'd reet fancy a,
+					 stop arsing around spend a penny grab a jumper barmy get away with ya flog, that's ace barmy upper class 
+					 laughing gear at the boozer. I bid you good day sorted it up North golly gosh bow ties are cool flabbergasted
+					  pennyboy bovver boots they can sod off a right royal knees up spiffing naff real ale lost her marbles, meat 
+					  and two veg scouser chin up copped a bollocking narky Southeners Bob's your uncle taking the mick blighty 
+					  scrumpy superb pie-eyed.</p>
+				</div>
+				<div id="editContent" class="editContent">
+					<p>I bid you good day, bent as a nine bob note trouble and strife a bit miffed Northeners jammy git. </p>
+				</div>
+			</div>
+			
+			<div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-12">
+				<img class="img-responsive" src="images/friends.jpeg">
+			</div>
+		</div>
+		<!-- /.container -->
+    <!-- // End Content Block 1-5 v1 -->
+    </div><!-- /#page -->
+    
+    
     <!-- Load JS here for greater good =============================-->
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>

@@ -17,7 +17,7 @@ public class GroupTest {
 		//does NOT test for requests, requests not complete yet.
 		
 		//testing variables
-		Group group = new Group("a group", "0", "the group name");
+		Group group = new Group("a group", "0", 0);
 		Account testAccount = new Account(null, null, 0, null, null, null, false);
 		ArrayList<Account> userlist = new ArrayList<Account>(); 
 		userlist.add(testAccount);
@@ -32,8 +32,6 @@ public class GroupTest {
 		org.junit.Assert.assertEquals(group.getDescription(), "a new group");
 		group.setRating(11);
 		org.junit.Assert.assertEquals(group.getRating(), 11);
-		group.setID("asd16");
-		org.junit.Assert.assertEquals(group.getID(), "asd16");
 		group.addAccount(testAccount);
 		org.junit.Assert.assertEquals(group.getMembers(), userlist);
 		org.junit.Assert.assertFalse(group.userisMod(testAccount));

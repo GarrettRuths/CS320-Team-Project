@@ -950,6 +950,24 @@ width:300px;
 margin:10px;
 }
 
+#name{
+float:left;
+width:300px;
+margin:10px;
+}
+
+#email{
+float:left;
+width:300px;
+margin:10px;
+}
+
+#phone{
+float:left;
+width:300px;
+margin:10px;
+}
+
 #loginSubmit{
 float:left;
 width:300px;
