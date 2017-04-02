@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet
 		String errorMessage = null;
 		boolean loggedin = false;
 		
-		buttonPress = req.getParameter("submit");
+		buttonPress = req.getParameter("loginSubmit");
 		
 		if(buttonPress != null)
 		{
@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet
 				
 			if(loggedin == true)
 			{
-				resp.sendRedirect(req.getContextPath() + "/home");
+				resp.sendRedirect(req.getContextPath() + "/group");
 			}
 			else
 			{	

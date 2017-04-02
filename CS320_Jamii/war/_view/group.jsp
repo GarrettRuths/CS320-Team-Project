@@ -41,7 +41,7 @@
     						<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
     							<span class="sr-only">Toggle navigation</span>
     						</button>
-    						<a href="#" class="navbar-brand brand"> Jamii Logo</a>
+    						<a href="home" class="navbar-brand brand"><img src="images/TransparentWhite.png" id="logo"></a>
    						</div>
     					<!--/.navbar-header -->
     					<!-- HERE IS YOUR SEARCH JSP THING -->
@@ -49,10 +49,6 @@
                             <input type="text" id="searchText"placeholder="Search..." required>
                             <input type="image" src="images/search.png" value="Search" id="searchButton">
 						</form><br>
-						
-						<form action="${pageContext.servletContext.contextPath}/login" method = "post">
-							<input name="startAdd" type="submit" value="Login" /> 
-	               		</form>
 	                    
     					<div id="navbar-collapse-02" class="collapse navbar-collapse">
     						<ul class="nav navbar-nav navbar-right">

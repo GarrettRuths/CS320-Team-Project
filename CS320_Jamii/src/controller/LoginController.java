@@ -1,7 +1,7 @@
 package controller;
 
 import javax.servlet.http.HttpServletRequest;
-
+/*  
 import database.DatabaseProvider;
 import database.IDatabase;
 import model.Account;
@@ -65,3 +65,4 @@ public class LoginController {
 		return this.database.queryForUserAccountByUsername(username);
 	}
 }
+*/
