@@ -49,11 +49,11 @@
     		
     		<!-- -->
     		<form class="login" action="${pageContext.servletContext.contextPath}/loginEntered" method="post">
+            	<input type="text" id="username" name="username" placeholder="User name" required>
             	<input type="text" id="username" name="firstname" placeholder="First name" required>
-            	<input type="text" id="username" name="lastname" placeholder="Last name" required>
             	<input type="text" id="username" name="email" placeholder="Email" required>
                 <input type="password" id="password" name="password" placeholder="Password"  required>
-                <input type="password" id="password" name="password2" placeholder="Password again"  required>
+                <input type="password" id="password" name="password2" placeholder="Re-Type Password"  required>
                 <input type="file" name="pic" accept="image/*">
                 <input type="button" value="Sign Up!" id="loginSubmit">
                 

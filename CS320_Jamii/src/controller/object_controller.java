@@ -31,6 +31,9 @@ public class object_controller {
 		}
 		return false;
 	}	
+	public void signup(String user, String pass, int id, String name, String email, String number){
+		this.users.add(new Account(user, pass, id, name, email, number, false));
+	}
 	
 	
 	
