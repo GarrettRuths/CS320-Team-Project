@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -39,12 +40,15 @@
     				<div class="container">
     				
     					<div class="navbar-header">
+
     						<a href="home" class="navbar-brand brand"><img src="images/TransparentWhite.png" id="logo"></a>
+
    						</div>
     					
     					
     				</div><!-- /.container -->
     			</nav>
+
     	
     		<form id="login" class="login" action="${pageContext.servletContext.contextPath}/login" method="post">
                 <input type="text" id="username" name="username" placeholder="Username" value="${username}" required>
@@ -53,6 +57,7 @@
                 <input type="text" id="email" name="email" placeholder="Email" value="${email}" required>
                 <input type="text" id="phone" name="phone" placeholder="Phone Number" value="${email}" required>
                 <input type="Submit" value="Sign Up" id="signupSubmit" name="signupSubmit">
+
                 
 			</form><!-- /.login -->	
 			

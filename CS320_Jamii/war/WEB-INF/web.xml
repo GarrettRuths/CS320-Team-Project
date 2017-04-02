@@ -14,6 +14,7 @@
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>servlet.LoginServlet</servlet-class>
   </servlet>
+
    <servlet>
   	<servlet-name>SignupServlet</servlet-name>
     <servlet-class>servlet.SignupServlet</servlet-class>
@@ -22,6 +23,7 @@
   	<servlet-name>GroupServlet</servlet-name>
     <servlet-class>servlet.GroupServlet</servlet-class>
   </servlet>
+
 
 
   
@@ -36,6 +38,7 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+
     <servlet-name>SignupServlet</servlet-name>
     <url-pattern>/signup</url-pattern>
   </servlet-mapping>
@@ -43,6 +46,7 @@
     <servlet-name>GroupServlet</servlet-name>
     <url-pattern>/group</url-pattern>
   </servlet-mapping>
+
 
  
 

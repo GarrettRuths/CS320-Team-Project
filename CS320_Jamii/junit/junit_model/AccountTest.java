@@ -17,9 +17,9 @@ public class AccountTest {
 	public void setUp(){
     	//---------Same setup as BooksForSaleTest (all components needed)---------------------------------------------------------------
        
-	    this.a1 = new Account("LoganH24", "abc123", 1, "LogeyBear", "Logan.Harris1995@gmail.com", "(570)-259-5555", false);
-	    this.a2 = new Account("Amcdevitt97", "def456", 2, "Ally", "amcdevitt97@ycp.edu", "(570)-259-4444", true);
-	    this.a3 = new Account("GRuths", "ghi789", 3, "Garry", "gruths@ycp.edu", "(570)-259-3333", false);
+	    this.a1 = new Account("LoganH24", "abc123", 1, "LogeyBear", "Logan.Harris1995@gmail.com", "555-555-5555",  false);
+	    this.a2 = new Account("Amcdevitt97", "def456", 2, "Ally", "amcdevitt97@ycp.edu", "555-555-5555",  true);
+	    this.a3 = new Account("GRuths", "ghi789", 3, "Garry", "gruths@ycp.edu", "555-555-5555",  false);
 	    
 	
 		//---------Same setup as BooksForSaleTest (all components needed)----------------------------------------------------------------
@@ -61,12 +61,6 @@ public class AccountTest {
 		assertEquals(a3.getEmail(),"gruths@ycp.edu");
 	}
 	
-	@Test
-	public void getPhoneNumberTest(){
-		assertEquals(a1.getPhoneNumber(),"(570)-259-5555");
-		assertEquals(a2.getPhoneNumber(),"(570)-259-4444");
-		assertEquals(a3.getPhoneNumber(),"(570)-259-3333");
-	}
 	
 	@Test
 	public void isLockedTest(){
