@@ -31,4 +31,17 @@ public class object_controller {
 		}
 		return false;
 	}	
+	
+	
+	
+	
+	public ArrayList<Account> getAccounts(){
+		return this.users;
+	}
+	
+	public ArrayList<Group> getGroups(){
+		return this.groups;
+	}
+	
+	//commit
 }
