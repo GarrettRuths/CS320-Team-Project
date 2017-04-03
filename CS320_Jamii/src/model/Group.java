@@ -7,57 +7,52 @@ import model.Account;
 
 public class Group {
 	
-	private String description, id, name;
+	private int groupId;
+	private String  name, description;
 	private int rating;
 	private ArrayList<Account> members;
 	private ArrayList<Account> moderators;
-	private ArrayList<Account> requests;
 	private ArrayList<Post> posts;
 	
-	public Group(String description, String id, String name){
+	public Group(String name, String description, int rating){
 		this.description = description;
-		this.id = id;
 		this.name = name;
-		this.rating = 0;
+		this.rating = rating;
 		this.members = new ArrayList<Account>();
 		this.moderators = new ArrayList<Account>();
-		this.requests = new ArrayList<Account>();
 		this.posts = new ArrayList<Post>();
 	}
 	
-	// setters
-	
-	public void setDescription(String description){
-		this.description = description;
-	}
-
-	public void setID(String id){
-		this.id = id;
+	public void setGroupId(int groupId) {
+		this.groupId = groupId;
 	}
 	
 	public void setName(String name){
 		this.name = name;
 	}
 	
-	public void setRaiting(int raiting){
-		this.rating = raiting;
+	public void setDescription(String description){
+		this.description = description;
 	}
 	
-	//getters
+	public void setRating(int rating){
+		this.rating = rating;
+	}
+	
+
+	public int getGroupId() {
+		return groupId;
+	} 
+	
+	public String getName(){
+		return this.name;
+	}
 	
 	public String getDescription(){
 		return this.description;
 	}
 
-	public String getID(){
-		return this.id;
-	}
-
-	public String getName(){
-		return this.name;
-	}
-	
-	public int getRaiting(){
+	public int getRating(){
 		return this.rating;
 	}
 	
@@ -69,15 +64,9 @@ public class Group {
 		return this.moderators;
 	}
 	
-	public ArrayList<Account> getRequests(){
-		return this.requests;
-	}
-	
 	public ArrayList<Post> getPosts(){
 		return this.posts;
 	}
-	
-	//other methods
 	
 	public void createPost(String text, Account account){
 		this.posts.add(new Post(text, account));

@@ -16,7 +16,13 @@
     
     <link href="css/style.css" rel="stylesheet">
 
-    
+     <style type="text/css">
+                #errorMessage {
+                        padding-top: 10px;
+                        color: red;
+                        font-size: 110%;
+                }
+     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -41,18 +47,24 @@
     				<div class="container">
     				
     					<div class="navbar-header">
-    						<a href="#" class="navbar-brand brand"> Jamii Logo</a>
+    						<a href="home" class="navbar-brand brand"><img src="images/TransparentWhite.png" id="logo"></a>
    						</div>
     					
     					
     				</div><!-- /.container -->
     			</nav>
     	
-    		<form class="login" action="${pageContext.servletContext.contextPath}/login" method="post">
-            	<input type="text" name="username"placeholder="Username" value="${username}" required>
-                <input type="password" name="password"placeholder="Password" value="${password}" required>
-                <input type="Submit" value="Login" name="submit">
+    		<form id="login" action="${pageContext.servletContext.contextPath}/login" method="post">
+            	<input type="text" id="username" name="username"placeholder="Username" value="${username}" required>
+                <input type="password" id="username" name="password"placeholder="Password" value="${password}" required>
+                <input type="Submit" value="Login" id="loginSubmit" name="loginSubmit">
                 
+                <div id="errorMessage">
+                	<c:if test="${! empty errorMessage}">
+						<tr>${errorMessage}</tr>
+					</c:if>
+				</div>
+				
 			</form><!-- /.login -->	
 			
     		</div><!-- /.wrapper -->

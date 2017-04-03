@@ -1,4 +1,3 @@
-//from edu.ycp.cs320.booksdb
 package database;
 
 public class PersistenceException extends RuntimeException {

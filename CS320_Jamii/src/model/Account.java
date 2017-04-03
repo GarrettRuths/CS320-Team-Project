@@ -3,6 +3,7 @@ package model;
 import java.util.Random;
 
 public class Account {
+	private int userId;
 	private String username = null;
 	private String password = null;
 	private int loginId = -1;
@@ -12,10 +13,9 @@ public class Account {
 	private boolean locked = false;
 
 	
-	
-	public Account(String user, String pass, int id, String name, String email, String phone, boolean lock){
-		this.username = user;
-		this.password = pass;
+	public Account(String username, String password, int id, String name, String email, String phone, boolean lock){
+		this.username = username;
+		this.password = password;
 		this.loginId = id;
 		this.name = name;
 		this.email = email;
@@ -23,9 +23,18 @@ public class Account {
 		this.locked = lock;
 	}
 	
+	
 	/*
 	 * ------------------------GETTERS AND SETTERS---------------------------------
 	 */
+	
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	
+	public int getUserId() {
+		return userId;
+	}
 	
 	public String getUsername(){
 		return this.username;
@@ -55,20 +64,12 @@ public class Account {
 		return this.locked;
 	}
 	
-	public boolean setUsername(String user){
-		boolean valid = this.validateUsername(user);
-		if(valid)
-			this.username = user;
-		
-		return valid;
+	public void setUsername(String user){
+		this.username = user;
 	}
 	
-	public boolean setPassword(String pass){
-		boolean valid = this.validatePassword(pass);
-		if(valid)
-			this.password = pass;
-		
-		return valid;
+	public void setPassword(String pass){
+		this.password = pass;
 	}
 	
 	public void setLoginId(int id){
@@ -79,22 +80,12 @@ public class Account {
 		this.name = name;
 	}
 	
-	public boolean setEmail(String email){
-		boolean valid = this.validateEmail(email);
-		
-		if(valid)
-			this.email = email;
-		
-		return valid;
+	public void setEmail(String email){
+		this.email = email;
 	}
 	
-	public boolean setPhoneNumber(String phone){
-		boolean valid = this.validatePhoneNumber(phone);
-		
-		if(valid)
-			this.phoneNumber = phone;
-		
-		return valid;
+	public void setPhoneNumber(String phone){
+		this.phoneNumber = phone;
 	}
 	
 	public void lock(){
@@ -125,22 +116,5 @@ public class Account {
 	 */
 	
 	//TODO
-	private boolean validatePhoneNumber(String phone){
-		return true;
-	}
 	
-	//TODO
-	private boolean validateEmail(String email){
-		return true;
-	}
-	
-	//TODO
-	private boolean validatePassword(String pass){
-		return true;
-	}
-	
-	//TODO
-	private boolean validateUsername(String user){
-		return true;
-	}
 }

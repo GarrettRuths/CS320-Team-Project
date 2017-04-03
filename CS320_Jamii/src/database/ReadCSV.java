@@ -1,4 +1,3 @@
-//from edu.ycp.cs320.booksdb.persist
 package database;
 
 import java.io.BufferedReader;
@@ -14,7 +13,7 @@ public class ReadCSV implements Closeable {
 	private BufferedReader reader;
 	
 	public ReadCSV(String resourceName) throws IOException {
-		InputStream in = this.getClass().getClassLoader().getResourceAsStream("persist/" + resourceName);
+		InputStream in = this.getClass().getClassLoader().getResourceAsStream("database/persist/res/" + resourceName);
 		if (in == null) {
 			throw new IOException("Couldn't open " + resourceName);
 		}
@@ -27,7 +26,7 @@ public class ReadCSV implements Closeable {
 			return null;
 		}
 		List<String> tuple = new ArrayList<String>();
-		StringTokenizer tok = new StringTokenizer(line, ",");
+		StringTokenizer tok = new StringTokenizer(line, "|");
 		while (tok.hasMoreTokens()) {
 			tuple.add(tok.nextToken().trim());
 		}

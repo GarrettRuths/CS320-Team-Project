@@ -1,7 +1,7 @@
 package controller;
 
 import javax.servlet.http.HttpServletRequest;
-
+/*  
 import database.DatabaseProvider;
 import database.IDatabase;
 import model.Account;
@@ -9,13 +9,13 @@ import model.ObjectHandler;
 
 public class LoginController {
 	private IDatabase database;
-
+	
 	public LoginController(){
-		this.database = DatabaseProvider.getInstance();
+		this.database = DatabaseProvider.getDatabase();
 	}
 	
 	//We can build this out later
-	/*
+	
 	public boolean handleLoginCheck(HttpServletRequest req){
 		String user = ObjectHandler.castObject(req.getSession().getAttribute("username"));
 		if(user != null){
@@ -31,6 +31,7 @@ public class LoginController {
 		req.setAttribute("loggedin", false);
 		return false;
 	}
+	
 	
 	//returns new login id
 	public int validateLogin(String username, int loginId){
@@ -62,5 +63,6 @@ public class LoginController {
 	
 	public Account returnAccountForUsername(String username){
 		return this.database.queryForUserAccountByUsername(username);
-	}*/
+	}
 }
+*/

@@ -1,7 +1,5 @@
 package database;
 
-import database.IDatabase;
-
 public class DatabaseProvider {
 	private static IDatabase theInstance;
 	
